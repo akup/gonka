@@ -1,0 +1,29 @@
+{
+  "name": "epoch-validator-verifier",
+  "version": "1.0.0",
+  "description": "Verify new epoch block signatures against previous epoch validators with merkle proofs",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "verify": "tsc && node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "@confio/ics23": "^0.6.8",
+    "@cosmjs/proto-signing": "^0.31.0",
+    "@cosmjs/tendermint-rpc": "^0.36.0",
+    "@noble/ed25519": "^2.1.0",
+    "long": "^5.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
